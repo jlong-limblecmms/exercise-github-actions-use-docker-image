@@ -18,7 +18,7 @@ jobs:
       # options: --user 1001
     steps:
       - name: Set permissions
-        run: sudo chown $USER . -R
+        run: sudo chown -R $USER .
       - name: Checkout repository
         run: git clone --depth 1 "https://${{ env.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" .
       - run: echo "Hello, World!"
